@@ -1,0 +1,75 @@
+檔案或資料夾名稱前多一個'.'代表為隱藏檔或隱藏資料夾。
+mkdir建立資料夾，-p建立巢狀資料夾
+rm -rf刪除檔案，資料夾等。
+touch 建立新檔案(不編輯)
+ssh-copy-id 
+ssh-keygen 產生金鑰
+
+python --version 查詢python的版本
+~/Documents/PythonVenvs Python的開發環境(虛擬環境)
+python -m venv envTest 對虛擬環境建立一個叫envTest的虛擬環境
+/bin/ 二進位文件，執行檔存放目錄
+-> 捷徑
+tree -L 2 列出樹狀結構2層
+. activate 啟動虛擬環境
+deactivate 結束虛擬環境
+~/.bashrc 使用者登入後的自動執行項目
+source /home/pi/Documents/PythonVenvs/envTest/bin/activate  啟動虛擬環境
+檔案命名避免使用'-'
+
+tailscale VPN工具
+curl -fsSL https://tailscale.com/install.sh | sh 安裝tailscale VPN連線工具
+sudo tailscale up   啟動tailscale VPN連線
+https://login.tailscale.com/a/1ab3ef7801956b    VPN連線後產生的網址，從網頁查詢VPN狀態
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 安裝homebrew工具
+依據提示把 Homebrew 加入環境變數。
+'''
+echo >> ~/.bashrc   添加一空行到.bashrc中的最後面
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc  添加' '中指令到.bashrc的最後面
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"  執行brew shellenv
+'''
+
+ngrok http 8501 啟動ngrok連到本機的http的8501 port網站
+
+pip install streamlit   在虛擬環境中安裝streamlit(限制只能在虛擬環境中安裝)
+streamlit --version 檢查streamlit版本
+streamlit hello 啟動streamlit，ctrl + C離開
+
+python輕量網頁伺服器
+python -m http.server 8080  啟動python的網頁伺服器
+
+安裝Apache網頁伺服器
+1. 更新套件索引並升級套件。
+'''sudo apt update && sudo apt upgrade -y'''
+2. 安裝套件 apache2。
+'''sudo apt install apache2 -y'''
+3. 使用 dpkg -l 命令查詢是否已安裝 apache2 及相關套件。
+'''dpkg -l | grep apache2'''
+4. 查詢 apache2 安裝的版本。
+'''apache2 -v'''
+5. 查詢 apache2 服務是否啟動。
+'''sudo systemctl status apache2'''
+6. 若未啟動，立即啟動服務。
+'''sudo systemctl start apache2'''
+7. 查看是否為開機自動啟動。
+'''sudo systemctl is-enabled apache2'''
+8. 設定為開機啟動。
+'''sudo systemctl enable apache2'''
+
+sudo nano /etc/apache2/apache2.conf
+sudo nano /etc/apache2/sites-available/000-default.conf
+sudo a2dissite 000-default.conf
+Site 000-default disabled.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+systemctl reload apache2
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ====
+重新載入 'apache2.service' 需要驗證。
+Authenticating as: ,,, (pi)
+Password:
+==== AUTHENTICATION COMPLETE ====
+sudo chmod -R 755 /home/pi/Documents/my_web
+sudo chown -R www-data:www-data /home/pi/Documents/my_web
+sudo chmod +x /home
+sudo chmod +x /home/pi
+sudo chown -R $USER:$USER ~/Documents/my_web

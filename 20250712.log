@@ -1,0 +1,23 @@
+講師：徐國堂
+Github 全世界最大的Open source
+目標：將Gemini小助手插入介面中
+Github
+repository(repo)儲存庫
+每個repo要對應電腦中的專業資料夾
+電腦要安裝
+git來同步電腦與Github的資料
+vscode編輯器
+Python 程式語言
+ pip 套件管理程式
+  site-package
+每個專案都使用一個Python虛擬環境
+warp AI終端機
+Miniconda安裝時，需要勾選前2選項，安裝後如無法執行，需將路徑加入Path中。
+
+開啟 VScode 複製存放庫
+md 描述檔MarkDown，寫說明書的語法
+檔案變更後變為暫存變更，將暫存變更打包成commit加上說明，然後同步到雲端
+安裝python and jupyter notebook(web server)模組，python開發(.py)，jupyter測試和學習(.ipynb)
+conda create --name myenvname python=3.10 建立虛擬環境名稱為myenvname，python版本為3.10
+
+1. 建置Python環境
