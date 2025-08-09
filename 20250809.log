@@ -1,0 +1,39 @@
+20250809
+講師：徐國堂
+
+ChatGPT新推出Open source版本，網址是：
+gpt-oss.com
+
+ollama推出新版本，已支援gpt-oss模型，有20b和120b兩種。
+https://ollama.com/download
+
+設定Respberry電腦環境變數
+nano ~/.bashrc
+新增環境變數
+export PATH=$PATH:/your/custom/path
+export VARIABLE_NAME=value
+儲存並離開編輯器(nano:按Ctrl+O，Enter，然後Ctrl+X)
+執行以下指令讓設定立即生效：
+source ~/.bashrc
+
+專案記錄檔
+requirements.txt
+記錄專案所需的Python套件和版本,把你要案裝的套件名稱和版本寫在這個檔案中。
+要安裝 requirements.txt 中列出的所有套件，可以使用以下指令：
+pip install -r requirements.txt
+
+Module裡面包含functions和classes還有常數
+
+LLM模型
+    - 產生一次性的輸出文字方式
+    - 產生chat模式的文字(streaming)
+    - 多模態的模型
+    - 可以調整模型
+    - 思考(thinking)的模型
+
+GenerateContentConfig 是 Google Gen AI SDK 中用於生成內容（generate_content）時的配置參數，常見的配置項目包括：
+    - thinking_config：思考配置，用於設置模型在生成內容時的思考方式。
+    - temperature：控制生成文字的隨機程度，值越低（接近0）結果越確定，值越高則越具多樣性。
+    - top_p：核取概率（nucleus sampling），用於控制生成詞彙的概率範圍。(0.0到1.0之間)，值越低則生成的詞彙越集中在高概率的部分。
+    - top_k：限制在最高概率的 k 個詞彙中進行採樣。(0到無限大)，值越低則生成的詞彙越集中在高概率的部分。
+    - system-instructions：系統提示，提供給模型的背景信息或指令，以引導生成內容的風格和主題。

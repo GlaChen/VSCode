@@ -1,0 +1,19 @@
+20250802上課內容
+上午直播錄影
+https://www.youtube.com/watch?v=-vfA_Jz5Zrk
+Funtion建立
+
+下午直播錄影
+https://www.youtube.com/watch?v=-o9FCMFe_ZM
+Funtion應用
+安裝Google GenAI SDK套件
+pip install -q -U google-genai
+pip show google-genai
+
+建立永久的API金鑰
+    nano ~/.bashrc
+在最後新增一行設定你的API金鑰(替換為實際的金鑰)
+    export GEMINI_API_KEY=你的API金鑰
+儲存並離開編輯器(nano:按Ctrl+O，Enter，然後Ctrl+X)
+執行以下指令讓設定立即生效：
+source ~/.bashrc
