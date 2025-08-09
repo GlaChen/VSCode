@@ -12,3 +12,24 @@ ollama AI模型工具，可以安裝多個AI模型
 #### 3. 執行安裝
 *執行安裝腳本*
 `./Miniconda3-latest-Linux-*.sh`
+
+### 安裝python in raspberry pi
+### 安裝Jupyter notebook in raspberry pi
+print(*objects, sep=' ', end='\n', file=None, flush=False)¶
+*代表不限制引數值數量，sep,end,file,flush為預設參數，sep為每個引數值之間加入一個空白，end為結束後加入換行
+
+### 安裝ollama
+curl -fsSL https://ollama.com/install.sh | sh
+# 啟動Ollama
+ollama serve
+# 檢查ollama版本
+ollama --version
+
+安裝ollama模型
+到https://ollama.com/search找gemma3 1b的模型
+複製指令到終端機執行
+ollama run gemma3:1b
+
+### list
+class list Python內建的class，list為可變的序列型別
+list實體中有屬性和功能(方法)，詳細查看資料結構中list的說明

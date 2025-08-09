@@ -1,0 +1,40 @@
+講師：徐國堂
+
+檢查ollama版本
+ ollama --version
+使用ollama幫助
+ ollama help
+啟動ollama，使用Gemma3模型，詢問模型「你是誰?」
+ ollama run gemma3:1b "你是誰?"
+
+檢查curl版本
+ curl --version
+使用curl執行ollama指令
+ curl http://localhost:11434/api/generate -d '{
+  "model": "gemma3:1b",
+  "prompt":"為什麼天空是藍色的?"
+ }'
+使用curl執行ollama指令並使用JSON格式，並在處理完成後再顯示結果
+ curl http://localhost:11434/api/generate -d '{
+  "model": "gemma3:1b",
+  "prompt": "為什麼天空是藍色的?",
+  "format": "json",
+  "stream": false
+ }'
+
+使用pip安裝open-webui
+ pip install open-webui
+啟動open-webui伺服器
+ open-webui serve
+使用瀏覽器開啟 http://RaspPiIPAddress:8000 來訪問open-webui
+
+寫python程式連接ollama模型，建立Lesson5資料夾，建立lesson5.ipynb檔案
+python套件可查看pypi.org網站
+在程式中使用老師的測試程式，貼上執行後，約30秒可以出結果。
+ https://github.com/roberthsu2003/huggingFace_api/tree/main/%E9%80%9A%E7%94%A8%E8%AA%9E%E8%A8%80/ollama#requests%E9%80%A3%E7%B5%90ollama
+使用requests套件連接ollama模型，如果沒有安裝requests套件，請先使用pip install requests安裝。
+可以到pypi.org查看requests套件的說明。
+import requests
+
+response = requests.get("https://www.example.com")
+
