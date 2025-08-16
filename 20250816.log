@@ -1,0 +1,28 @@
+20250816
+講師：徐國堂
+
+Gradio
+Gradio 是一個開源的 Python 庫，用於快速構建和分享機器學習模型的用戶界面。它允許開發者輕鬆地創建交互式的 Web 應用程序，讓用戶可以直接與模型進行交互。
+
+Hugging Face 提供了 Gradio 的集成，允許用戶在其平台上使用 Gradio 構建的界面。有許多免費的模型。
+
+安裝gradio
+pip install -upgrade gradio
+
+執行python程式時，使用gradio可以hot reload，當程式碼有變更時，Gradio 會自動重新載入界面，而不需要手動重啟服務。
+使用python執行
+python XXX.py
+
+使用gradio執行
+gradio XXX.Py
+
+在根目錄建立".gitignore"檔，可以忽略不需要加入版本控制的檔案或目錄
+例如：
+```
+.env
+.gradio
+__pycache__
+```
+
+gradio會自動建立界面，執行後會產生Local URL和Public URL，讓使用者可以訪問。
+使用Input和Output來定義輸入和輸出的格式，最後加入AI模型進行處理。
