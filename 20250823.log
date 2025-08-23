@@ -1,3 +1,32 @@
 20250823
 講師：徐國堂
 
+Line bot -> Line提供Messaging API -> Line_server -> Gemini API
+
+Line_server:
+webhook
+
+WSGI server (Web Server Gateway Interface):
+Flask開發模式的WSGI Server
+支援WSGI應用程式 app
+app的實體方法route()
+要使用app的實體方法，在前面要加上@，下面要接定義的function
+Debug模式指令：flask --app main run --debug，程式編輯後存檔會自動重啟。
+
+gunicorn:是WSGI的網頁伺服器。
+
+安裝:
+pip install gunicorn
+
+執行:
+gunicorn main:app
+
+Linebot連接render，Render上設定環境變數：
+CHANNEL_ACCESS_TOKEN 在Line Developers Console中的Messaging API設定中可以找到。
+CHANNEL_SECRET 在Line Developers Console中的Messaging API設定中可以找到。
+GENMINI_API_KEY
+PYTHON_VERSION 3.12.11
+
+AI自訂專屬資料庫：
+MCP
+RAG
