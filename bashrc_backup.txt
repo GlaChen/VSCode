@@ -152,4 +152,4 @@ unset __mamba_setup
 
 source '/home/pi/.bash_completions/open-webui.sh'
 
-export GEMINI_API_KEY=AIzaSyCGprPFINUeUqAo1mVLZTyZFzlds02VNns
+export GEMINI_API_KEY=
